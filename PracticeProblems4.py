@@ -189,15 +189,46 @@ import random
 #         print("Hot")
 #         ans = int(input("Guess again: "))
 
+# print("-----------------------------")
+# print("Problem 9")                            NEEDS FINISHED
+# print("-----------------------------")
+#
+# num = int(input("How many numbers are in your safe combination?"))
+# combination = []
+# attempt = []
+# i = 0
+# j = 0
+#
+# for num in range(0, num):
+#     combination.append(random.randint(0,99))
+#
+# for i in combination:
+#     while j != combination[i]:
+#         j += 1
+#
+#     attempt.append(j)
+#
+# print("Safe combination:", combination)
+# print("Combination we found:", attempt)
+
+
 print("-----------------------------")
-print("Problem 9")
+print("Problem 10")
 print("-----------------------------")
 
-num = int(input("How many numbers are in your safe combination?"))
+print("Pattern 1")
+for i in range(5,0,-1):
+    print("#" * i)
+print()
 
+print("Pattern 2")
+for i in range(1,6):
+    print("#" * i)
+print()
 
-
-
+print("Pattern 3")
+for i in range(5,0,-1):
+    print(" " * (i - 1), "#" * (i - (5 - i)))
 
 
 
