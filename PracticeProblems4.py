@@ -1,5 +1,20 @@
 import random
 
+print("-----------------------------")
+print("Problem 1")
+print("-----------------------------")
+
+for land in range(1,86, 17):
+    print(f'This {land} is my {land}')
+
+print("-----------------------------")
+print("Problem 2")
+print("-----------------------------")
+
+for num1 in range(0,5):
+    for num2 in range(0,5-(num1+1)):
+        print('*', end='')
+        print('#')
 
 print("-----------------------------")
 print("Problem 3")
@@ -11,6 +26,22 @@ if ans.lower() != "yes":
     print("I thought so.")
 while ans.lower() != "yes":
     ans = input("Would you like fries with that? ")
+
+# print("-----------------------------")
+# print("Problem 4")
+# print("-----------------------------")
+#
+# num = int(input("Enter a positive integer."))
+# print("All primes less than or equal to", num)
+#
+# for i in range(1, num):
+#     for j in range(i - 1, 1, -1):
+#         if i % j == 0:
+#             break
+#         print(i)
+
+
+
 
 print("-----------------------------")
 print("Problem 5")
