@@ -10,10 +10,12 @@ alphabet = [
     'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
 ]
 
-shift = input("Enter a value to shift by: ")
+shift = int(input("Enter a value to shift by: "))
 
 for letter in alphabet:
-    letterPairs[alphabet[letter]] = alphabet[(letter + shift) % 26]
+    originalIndex = alphabet.index(letter)
+    shiftIndex = (originalIndex + shift) % 26
+    letterPairs[letter] = alphabet[shiftIndex]
 
 plaintext = input("Enter your message: ")
 
@@ -21,13 +23,32 @@ ciphertext = ''
 
 for char in plaintext:
     if char in alphabet:
-        ciphertext = ciphertext + letterPairs[char]
+        ciphertext += letterPairs[char]
     else:
-        ciphertext = ciphertext + char
+        ciphertext += char
 
 print("Plaintext:", plaintext)
 print("Ciphertext:", ciphertext)
 
+
+
+print("=================================================")
+print("Problem 2")
+print("=================================================")
+
+from random import randint
+
+dice = [4,6,8,10,12,20,100]
+
+for die in dice:
+    total = 0
+    avg = 0
+    for num in range(1,1001):
+        total += randint(1, die)
+        if num == 10 or num == 100 or num == 1000:
+            avg = total / num
+            print(f"Average roll for {num}d{die}: {avg}")
+    print()
 
 
 
